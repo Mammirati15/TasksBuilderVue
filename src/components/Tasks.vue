@@ -1,0 +1,21 @@
+<template>
+  <div :key="task.id" v-for="task in tasks">
+    <TaskItem @delete-task="$emit('delete-task', task.id)" :task="task"/>
+  </div>
+</template>
+
+<script>
+  import TaskItem from './Task.vue'
+
+  export default {
+    name: 'TasksItems',
+    props: {
+      tasks: Array
+    },
+    components: {
+      TaskItem
+    },
+    emits: ['delete-task']
+
+  }
+</script>
