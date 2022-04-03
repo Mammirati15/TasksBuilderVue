@@ -13,7 +13,7 @@
     },
   methods: {
     onClick () {
-      console.log('Clicked on you Mamma')
+      this.$emit('btn-click')
     }
   }
   }
